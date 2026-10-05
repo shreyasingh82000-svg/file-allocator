@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Info } from 'lucide-react';
 import './HomePage.css';
 
-const HomePage = ({ onStart }) => {
+const HomePage = ({ onStart, onNavigate }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const teamMembers = [
@@ -29,7 +29,7 @@ const HomePage = ({ onStart }) => {
               <span>START SIMULATION</span>
               <ArrowRight size={20} />
             </button>
-            <button className="btn btn-secondary" onClick={() => window.location.href = '#about'}>
+            <button className="btn btn-secondary" onClick={() => onNavigate('about')}>
               <Info size={20} />
               <span>ABOUT PROJECT</span>
             </button>

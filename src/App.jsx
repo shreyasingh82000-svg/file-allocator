@@ -19,7 +19,7 @@ function AppContent() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <HomePage onStart={() => setCurrentPage('dashboard')} />;
+        return <HomePage onStart={() => setCurrentPage('dashboard')} onNavigate={setCurrentPage} />;
       case 'dashboard':
         return <DashboardPage />;
       case 'simulator':

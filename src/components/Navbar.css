@@ -1,0 +1,141 @@
+.navbar {
+  background-color: #DA9770;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar-subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar-menu-desktop {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-link.active {
+  background-color: #DE774F;
+  font-weight: 600;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.navbar-menu-mobile {
+  display: none;
+}
+
+.navbar-link-mobile {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.navbar-link-mobile:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-link-mobile.active {
+  background-color: #DE774F;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu-desktop {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu-mobile {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #DA9770;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand h1 {
+    font-size: 1rem;
+  }
+
+  .navbar-subtitle {
+    font-size: 0.65rem;
+  }
+}
